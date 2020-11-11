@@ -1,0 +1,118 @@
+.usershowPage {
+  
+  .userInfo {
+    &_img {
+      margin-top: 50px;
+      padding-top: 30px;
+      margin: 0 auto;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    &_name {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+
+    &_selfIntroduction {
+      margin-top: 5px;
+    }
+  }
+
+  .userAction {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin: auto;
+    padding-bottom:20px;
+    color:#c3c7d0;
+    &_common {
+      & > a {
+        width: 80px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color:#c3c7d0;
+        text-decoration: none;
+        transition: color .5s;
+        &:hover {
+          color:#fd5068;
+        }
+      }
+    }
+  }
+}
+.user-button {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 15px;
+ }
+.show-container{
+   box-shadow: 0 0 6px rgba(0,0,0,.1);
+   border-radius: 3px;
+   background: #fff;
+   width: 60%;
+   margin: 0 auto;
+   margin-top: 50px;
+}
+
+.profile {
+  margin-left: 50%;
+  font-size: 16px;
+  text-align: left;
+  width:70%;
+  margin: 0 auto;
+  
+  &-top {
+  padding: 15px 0;
+  margin-bottom: 15px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  }
+  
+  &-bottom {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.home-back {
+  font-size: 15px;
+  color: #333;
+  
+  &:hover {
+    color: #333;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .show-container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .usershowPage {
+    margin: auto;
+  }
+  
+  .show-container {
+    margin-top: 30px;
+    width: 90%;
+  }
+  
+  .profile {
+    font-size: 16px;
+    width: 90%;
+  }
+  
+  .user-button {
+    width: 60%;
+  }
+  
+}
