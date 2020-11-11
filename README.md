@@ -26,7 +26,7 @@ LearnerLink
 
 ・データベース：MySQL
 
-・開発環境:Vagrant + Virtualbox
+・開発環境：Vagrant + Virtualbox
 
 ・サービス公開環境：Heroku
 
