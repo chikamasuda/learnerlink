@@ -1,7 +1,7 @@
 
 .fv-image {
     width: 100%;
-    posision: relative;
+    position: relative;
     background-image: url('../img/fv.jpg');
     height: 35vh;
     background-position: center;
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 70px;
+    padding-top: 30px;
     margin: 0 auto;
     height: 100%;
 }
@@ -57,15 +57,17 @@
 .user {
     display: flex;
     flex-wrap: wrap;
-    width: 720px;
+    width: 1040px;
     margin-left: 20px;
     padding: 0;
     
     li {
-    width: 180px;
+    background: #fff;
     list-style:none;
     margin-bottom: 20px;
-    
+    padding: 15px 40px;
+    margin-left: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0,.1);
   }
   
   &-image {
@@ -78,7 +80,6 @@
 .user-name {
     font-size: 18px;
     font-weight: bold;
-    line-hight: 1;
     
     &-text {
         line-height: 1.5;
@@ -133,25 +134,13 @@
 }
   @media screen and (max-width:1024px){
       
-    .sidebar {
-        width: 700px;
-        margin: 0 auto;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    
-    .side-title-text {
-        padding-top: 5px;
-    }
-
-      
     .home-container, .search-container {
         padding-top: 30px;
         display: block;
         
     }
     .user {
-        width: 720px;
+        width: 1000px;
         margin: 0 auto;
         padding: 0;
         
@@ -190,6 +179,7 @@
     .user {
         padding: 0;
         max-width: 360px;
+        justify-content: center;
     }
     
        .sidebar {
