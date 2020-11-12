@@ -16369,7 +16369,6 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 30px;
   margin: 0 auto;
   height: 100%;
 }
@@ -16406,8 +16405,8 @@ readers do not read off random characters that represent icons */
   display: flex;
   flex-wrap: wrap;
   width: 1040px;
-  margin-left: 20px;
   padding: 0;
+  margin: 30px 0 30px 20px;
 }
 .user li {
   background: #fff;
