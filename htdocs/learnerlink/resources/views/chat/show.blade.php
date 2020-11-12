@@ -64,10 +64,8 @@
 <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script>
-var chat_room_id = "{{ $chat_room_id }}";
-var user_id = "{{ Auth::user()->id }}";
-var current_user_name = "{{ Auth::user()->name }}";
-var chat_room_user_name = "{{ $chat_room_user_name }}";
+var chat_room_id = {{ $chat_room_id }};
+var user_id = {{ Auth::user()->id }};
 </script>
 
 </body>
