@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => '1.0.0+no-version-set',
+    'version' => '1.0.0.0',
     'aliases' => 
     array (
     ),
-    'reference' => 'cc76aead36963fbec782c1fca769a95b9403398e',
+    'reference' => NULL,
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -45,12 +45,12 @@
     ),
     'doctrine/instantiator' => 
     array (
-      'pretty_version' => '1.3.1',
-      'version' => '1.3.1.0',
+      'pretty_version' => '1.4.0',
+      'version' => '1.4.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f350df0268e904597e3bd9c4685c53e0e333feea',
+      'reference' => 'd56bf6102915de5702778fe20f2de3b2fe570b5b',
     ),
     'doctrine/lexer' => 
     array (
@@ -374,12 +374,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => '1.0.0+no-version-set',
+      'version' => '1.0.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cc76aead36963fbec782c1fca769a95b9403398e',
+      'reference' => NULL,
     ),
     'laravel/tinker' => 
     array (
@@ -679,12 +679,12 @@
     ),
     'pusher/pusher-php-server' => 
     array (
-      'pretty_version' => 'v3.4.1',
-      'version' => '3.4.1.0',
+      'pretty_version' => 'v3.3.1',
+      'version' => '3.3.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'a5fcdc65efd8d9a8291efbe01d326ec7ef5d5cee',
+      'reference' => '2279bcd21a608a76f9be1fe0675aa2dd1efb2fa0',
     ),
     'ralouphie/getallheaders' => 
     array (

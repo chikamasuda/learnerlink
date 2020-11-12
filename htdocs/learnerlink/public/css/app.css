@@ -16406,7 +16406,7 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   width: 1040px;
   padding: 0;
-  margin: 30px 0 30px 20px;
+  margin: 50px 0 10px 20px;
 }
 .user li {
   background: #fff;
@@ -16480,7 +16480,6 @@ ul {
 
 @media screen and (max-width: 1024px) {
   .home-container, .search-container {
-    padding-top: 30px;
     display: block;
   }
 
@@ -16488,6 +16487,7 @@ ul {
     width: 1000px;
     margin: 0 auto;
     padding: 0;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 768px) {
