@@ -1,0 +1,19 @@
+
+.sign-in {
+    background: #fff;
+    padding-bottom: 50px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 6px rgba(0,0,0,.1);
+    
+    &-title {
+        font-size: 24px;
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width:420px){
+    .sign-in {
+        width: 90%;
+    }
+}
