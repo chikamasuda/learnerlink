@@ -2,12 +2,7 @@
 
 namespace App;
 
-use App\User;
-use App\Reaction;
-use App\Constants\Status;
-
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -65,10 +60,8 @@ class User extends Authenticatable
     public function like($userId)
     {
         $exist = $this->is_like($userId);
-        
         $its_me = $this->id == $userId;
     
-        
         if($exist || $its_me) {
             return false;
         } else {
@@ -80,8 +73,6 @@ class User extends Authenticatable
     public function dislike($userId)
     {
         $exist = $this->is_like($userId);
-        
-        
         $its_me = $this->id == $userId;
         
         if($exist || $its_me) {

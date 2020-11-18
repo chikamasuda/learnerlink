@@ -53,11 +53,8 @@ class ChatController extends Controller
         }
         
         $chat_room_user = User::findOrFail($matching_user_id);
-
         $chat_room_user_name = $chat_room_user->name;
-        
         $chat_room_user_image = $chat_room_user->image;
-
         $chat_messages = ChatMessage::where('chat_room_id', $chat_room_id)
         ->orderby('created_at')
         ->get();
@@ -65,17 +62,14 @@ class ChatController extends Controller
         return view('chat.show', 
         compact('chat_room_id', 'chat_room_user',
         'chat_messages','chat_room_user_name'));
-
     }
 
     public static function chat(Request $request){
-
         $chat = new ChatMessage();
         $chat->chat_room_id = $request->chat_room_id;
         $chat->user_id = $request->user_id;
         $chat->message = $request->message;
         $chat->save();
-
         event(new ChatPusher($chat));
     }
 }

@@ -44,7 +44,7 @@ class LoginController extends Controller
         $email = 'test@gmail.com';
         $password = 'test-guestuser';
         
-          return view('auth/guest');
+        return view('auth/guest');
         
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
           return view('/home');

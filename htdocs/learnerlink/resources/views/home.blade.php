@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="home-container">
-  <img src="../img/fv.jpg" class="fv-pc">
-  <img src="../img/fv-pd.jpg" class="fv-pd">
+  <div class="fv-pc"><img src="../img/fv.jpg"></div>
+  <div class="fv-pd"><img src="../img/fv-pd.jpg"></div>
   <div class="fv-inner text-center col-sm-8 pt-5">
     <p class="matching-text">User list</p>
   </div>

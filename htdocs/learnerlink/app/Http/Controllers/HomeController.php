@@ -27,11 +27,8 @@ class HomeController extends Controller
     public function index()
    {
       $users = User::all() ;
-      
       $users = User::orderBy('id', 'desc')->paginate(12);
-      
       $user_id = Auth::id(); // 追加
-      
       return view('home', compact('users'));
    }
    

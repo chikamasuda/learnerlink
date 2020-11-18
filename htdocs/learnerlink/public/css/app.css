@@ -16105,7 +16105,6 @@ readers do not read off random characters that represent icons */
 .fv-maintext {
   font-size: 60px;
   font-weight: bold;
-  　color: #fff;
 }
 
 .fv-subtext {
@@ -16613,10 +16612,14 @@ ul {
   border-bottom: 1px solid #17a2b8;
 }
 
+img {
+  width: 100%;
+}
+
 .fv-pc {
   width: 100%;
   height: 35vh;
-  posision: relative;
+  position: relative;
 }
 
 .fv-inner {

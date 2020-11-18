@@ -60,7 +60,6 @@ class RegisterController extends Controller
             'address' => 'required|string|max:15',
             'language' => 'required|string|max:15',
             'self_introduction' => 'string|max:255', 
-           
         ]);
     }
     
@@ -73,7 +72,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
         //createメソッドでユーザー情報を作成
         return User::create([
             'name' => $data['name'],
