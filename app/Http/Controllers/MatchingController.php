@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Reaction;
 use App\User;
 use Auth;
@@ -21,7 +20,7 @@ class MatchingController extends Controller
         ->where('user_id', Auth::id())
         ->pluck('like_id');
         
-        $matching_users = User::whereIn('id', $matching_ids)->get(); 
+        $matching_users = User::whereIn('id', $matching_ids)->get();
         $match_users_count = count($matching_users);
         return view('users.matching', compact('matching_users', 'match_users_count'));
     }

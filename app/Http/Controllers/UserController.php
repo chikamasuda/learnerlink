@@ -6,19 +6,28 @@ use Illuminate\Http\Request;
 use App\Http\Requests\ProfileRequest;
 use App\User;
 use Auth;
+use App\Comment;
 use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Intervention\Image\Facades\Image;
+use App\Reaction;
 
 class UserController extends Controller
 {
     public function show($id)
     {
         $user = User::findorFail($id);
+
         return view('users.show', compact('user'));
     }
     
     public function edit($id) 
     {
         $user = User::findorFail($id);
+        
         return view('users.edit', compact('user'));
     }
     
@@ -63,10 +72,12 @@ class UserController extends Controller
     
     public function index()
     {
-        $users = User::orderBy('id', 'desc')->paginate(20);
-        
-        return view('users.index',[
-            'users' => $users,
-            ]);
+        $got_reaction_ids = Reaction::where([
+            ['like_id', Auth::id()], //like_idがログイン中のユーザーIDになる
+            ])->pluck('user_id');
+
+        $like_users = User::whereIn('id', $got_reaction_ids)->get();
+        $like_users_count = count($like_users);
+        return view('users.index', compact('like_users', 'like_users_count'));
     }
 }
