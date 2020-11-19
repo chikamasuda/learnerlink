@@ -46,11 +46,7 @@ class LoginController extends Controller
         return view('auth/guest');
         
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
-          return view('/home');
+            return view('/home');
         }
-        
-       
     }
-    
-   
 }

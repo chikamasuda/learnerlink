@@ -26,11 +26,13 @@ LearnerLink
 
 ・データベース：MySQL
 
-・開発環境:Docker
+・開発環境：Vagrant + Virtualbox
 
 ・サービス公開環境：Heroku
 
 ・バージョン管理：git/Github
+
+・テスト：PHP Unit
 
 ## 制作物
 
@@ -62,7 +64,4 @@ Webアプリケーション
 
 ・チャット機能（APIのpusherを使用）
 
-・ページネーション機能
-
-・検索機能
-
+・機能テスト

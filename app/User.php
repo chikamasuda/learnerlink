@@ -27,7 +27,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
     
-
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -40,11 +39,6 @@ class User extends Authenticatable
     public function user_id()
     {
         return $this->hasMany('App\Reaction', 'user_id', 'id');
-    }
-    
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
     }
     
     public function likes()
@@ -84,7 +78,6 @@ class User extends Authenticatable
     }    
     
      public function is_like($userId)
-
     {
      return $this->likes()->where('like_id', $userId)->exists();
     }

@@ -12,7 +12,6 @@ use Auth;
 
 class ChatController extends Controller
 {
-    
     public static function show(Request $request){
     
         $matching_user_id = $request->user_id;
@@ -26,14 +25,9 @@ class ChatController extends Controller
             ->where('user_id', $matching_user_id)
             ->pluck('chat_room_id');
 
-
         // なければ作成する
         if ($chat_room_id->isEmpty()){
-
-            ChatRoom::create(); // チャットルーム作成
-            
-            $latest_chat_room = ChatRoom::orderBy('created_at', 'desc')->first(); // 最新チャットルームを取得
-
+            $latest_chat_room = ChatRoom::create();  // チャットルーム作成
             $chat_room_id = $latest_chat_room->id;
 
             ChatRoomUser::create( 
