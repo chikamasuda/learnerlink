@@ -27,14 +27,6 @@ class UserController extends Controller
     
     public function update($id, ProfileRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|string|max:15',
-            'email' => 'required|string|email|max:255',
-            'language' => 'required|string|max:15',
-            'address' => 'required|string|max:15',
-            'self_introduction' => 'required|string|max:255', 
-        ]);
-        
         $user = User::findorFail($id);
         
         // if ($request->user_profile_photo !=null) {
