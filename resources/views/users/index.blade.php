@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-  <img src="../img/fv.jpg" class="fv-pc">
-  <img src="../img/fv-pd.jpg" class="fv-pd">
-    <div class="fv-inner text-center col-sm-8 pt-5">
-      <p class="matching-text">Matching</p> 
-    </div>
+  <div><img class="fv-pc" src="../img/matching.jpg"></div>
+  <div><img  class="fv-pd" src="../img/match-pd.jpg"></div>
+  <div class="fv-inner text-center col-sm-8 pt-5">
+    <p class="matching-text">Matching</p> 
+  </div>
   <div class="container">
     <ul class="nav nav-tabs nav-justified mb-3 mt-5">
       <li class="nav-item"><a href="{{ route('matching') }}" class="nav-link {{ Request::is('matching') ? 'active' : '' }}">マッチング成立</a></li>
