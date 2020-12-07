@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="fv-pc"><img src="../img/fv.jpg"></div>
-<div class="fv-pd"><img src="../img/fv-pd.jpg"></div>
+<div><img class="fv-pc" src="../img/fv.jpg"></div>
+<div><img class="fv-pd"src="../img/fv-pd.jpg"></div>
 <div class="fv-inner text-center col-sm-8 pt-5">
   <p class="matching-text">Matching</p>
 </div>
