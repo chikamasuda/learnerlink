@@ -16369,6 +16369,7 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .search-container {
