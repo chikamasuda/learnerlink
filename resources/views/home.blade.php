@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div><img class="fv-pc" src="../img/fv.jpg"></div>
-<div><img class="fv-pd" src="../img/fv-pd.jpg"></div>
+<div class="home-container">
+  <img class="fv-pc" src="../img/fv.jpg">
+  <img class="fv-pd" src="../img/fv-pd.jpg">
 <div class="fv-inner text-center col-sm-8 pt-5">
   <p class="matching-text">User list</p>
 </div>
-<div class="home-container">
   <ul class="text-center user">
     @foreach($users as $user)
     <li class="user-block mb-4">
