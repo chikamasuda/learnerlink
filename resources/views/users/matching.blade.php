@@ -14,7 +14,7 @@
   <div class="mt-3 active" id="#matching">
     <div class="matchingNum text-info">{{ $match_users_count }}人とマッチングしています</div>
     <h2 class="pageTitle">マッチングした人一覧</h2>
-    <div class="matchingList">
+    <div class="matchingList mb-5">
       @foreach( $matching_users as $user)
       <div class="matchingPerson">
         @if($user->image)
