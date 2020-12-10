@@ -561,8 +561,8 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /var/www/html/resources/assets/js/app.js */"./resources/assets/js/app.js");
-module.exports = __webpack_require__(/*! /var/www/html/resources/assets/sass/app.scss */"./resources/assets/sass/app.scss");
+__webpack_require__(/*! /Users/masudachika/Desktop/learnerlink/htdocs/learnerlink/resources/assets/js/app.js */"./resources/assets/js/app.js");
+module.exports = __webpack_require__(/*! /Users/masudachika/Desktop/learnerlink/htdocs/learnerlink/resources/assets/sass/app.scss */"./resources/assets/sass/app.scss");
 
 
 /***/ })
