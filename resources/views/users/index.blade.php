@@ -15,7 +15,7 @@
       <div class="active" id="#matching">
         <div class="matchingNum text-info mt-3">{{ $like_users_count }}人にいいねされてます</div>
         <h2 class="pageTitle">いいねされた人一覧</h2>
-        <div class="matchingList">
+        <div class="matchingList mb-5">
           @foreach( $like_users as $user)
           <div class="matchingPerson">
             @if($user->image)
