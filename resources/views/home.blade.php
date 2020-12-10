@@ -7,7 +7,7 @@
 <div class="fv-inner text-center col-sm-8 pt-5">
   <p class="matching-text">User list</p>
 </div>
-  <ul class="text-center user">
+  <ul class="text-center user mb-4">
     @foreach($users as $user)
     <li class="user-block mb-4">
       @if($user->image)
