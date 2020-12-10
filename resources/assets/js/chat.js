@@ -15,14 +15,12 @@ $(document).ready(function() {
                     user_id: user_id,
                     message: $('.messageInputForm_input').val(),
                 },
-            
             })
             
             .done(function(data){
                 //console.log(data);
                 event.target.value = '';
             });
-
         }
     });
 
@@ -41,6 +39,4 @@ $(document).ready(function() {
             e.message.message + '</div></div></div>');    
         }
     });
-
-
 });
