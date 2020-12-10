@@ -2,7 +2,7 @@
 
 ## URL
 
-https://learnerlink.herokuapp.com/
+https://learnerlink.sakura.ne.jp/
 
 ※ゲストログインページから登録なしでログインできます。
 
@@ -26,9 +26,9 @@ LearnerLink
 
 ・データベース：MySQL
 
-・開発環境：Vagrant + Virtualbox
+・開発環境：Docker
 
-・サービス公開環境：Heroku
+・サービス公開環境：さくらインターネットサーバー
 
 ・バージョン管理：git/Github
 
