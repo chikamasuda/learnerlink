@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="home-container">
+<div class="home-container mb-3">
   <img class="fv-pc" src="../img/fv.jpg">
   <img class="fv-pd" src="../img/fv-pd.jpg">
 <div class="fv-inner text-center col-sm-8 pt-5">
