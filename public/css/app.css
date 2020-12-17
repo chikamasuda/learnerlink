@@ -16369,7 +16369,6 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
-  margin-bottom: 30px;
 }
 
 .search-container {
@@ -16410,7 +16409,6 @@ readers do not read off random characters that represent icons */
 .user li {
   background: #fff;
   list-style: none;
-  margin-bottom: 20px;
   padding: 15px 40px;
   margin-left: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="home-container mb-3">
+<div class="home-container">
   <img class="fv-pc" src="../img/fv.jpg">
   <img class="fv-pd" src="../img/fv-pd.jpg">
 <div class="fv-inner text-center col-sm-8 pt-5">
@@ -9,7 +9,7 @@
 </div>
   <ul class="text-center user">
     @foreach($users as $user)
-    <li class="user-block mb-4">
+    <li class="user-block mb-5">
       @if($user->image)
       <p class="text-center mb-2">
         <img class="user-image" src="data:image/png;base64,{{ $user->image }}">
