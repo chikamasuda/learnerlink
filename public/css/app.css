@@ -16369,6 +16369,7 @@ readers do not read off random characters that represent icons */
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .search-container {
@@ -16495,14 +16496,6 @@ ul {
     margin-bottom: 30px;
   }
 
-  .side-title {
-    font-size: 18px;
-  }
-
-  .side-title-text {
-    font-size: 14px;
-  }
-
   .user {
     padding: 0;
     max-width: 540px;
@@ -16517,22 +16510,14 @@ ul {
   .user {
     padding: 0;
     max-width: 360px;
-    justify-content: center;
+    justify-content: left;
   }
 
-  .sidebar {
-    width: 340px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-  }
-
-  .search-title {
-    margin-top: 30px;
-    margin-bottom: 0;
-  }
-
-  .search-container {
-    padding-top: 0;
+  .user li {
+    background: none;
+    padding: 0;
+    margin-left: 20px;
+    box-shadow: none;
   }
 }
 .matchingNum {

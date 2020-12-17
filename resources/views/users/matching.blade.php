@@ -30,7 +30,7 @@
         <form method="POST" action="{{ route('chat.show') }}">
           {{ csrf_field() }}
           <input name="user_id" type="hidden" value="{{$user->id}}">
-          <button type="submit" class="chatForm_btn btn-block mb-5">チャットを開く</button>
+          <button type="submit" class="chatForm_btn btn btn-info pt-2 pb-2 mt-1">チャットを開く</button>
         </form>
       </div>
       @endforeach

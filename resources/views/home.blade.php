@@ -9,7 +9,7 @@
 </div>
   <ul class="text-center user">
     @foreach($users as $user)
-    <li class="user-block mb-5">
+    <li class="user-block mb-4">
       @if($user->image)
       <p class="text-center mb-2">
         <img class="user-image" src="data:image/png;base64,{{ $user->image }}">

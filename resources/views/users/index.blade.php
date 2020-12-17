@@ -30,7 +30,7 @@
           <div class="matchingPerson_name">{{ $user->name }}</div> 
           <form>
             {{ csrf_field() }}
-            {!! link_to_route('users.show', 'プロフィールをみる',[$user->id],['class'=>'btn btn-md btn-info pt-2 pb-2 mt-3']) !!}
+            {!! link_to_route('users.show', 'プロフィール',[$user->id],['class'=>'btn btn-md btn-info pt-2 pb-2 mt-3']) !!}
           </form>
           </div>
          @endforeach
