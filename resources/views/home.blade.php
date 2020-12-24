@@ -4,9 +4,17 @@
 <div class="home-container">
   <img class="fv-pc" src="../img/fv.jpg">
   <img class="fv-pd" src="../img/fv-pd.jpg">
-<div class="fv-inner text-center col-sm-8 pt-5">
-  <p class="matching-text">User list</p>
-</div>
+  <div class="fv-inner text-center col-sm-8 pt-5">
+    <p class="matching-text">User list</p>
+  </div>
+  <div>
+    <form class="text-center mt-4 form" action="{{ url('/search') }}" method="get">
+      {{ csrf_field() }}
+      <div class="form-group d-flex justify-content-center">
+        <input type="text" class="form-control search-form" placeholder="ユーザーをキーワードで検索" rows="3">
+        <button type="submit" class="btn btn-info ml-1"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
   <ul class="text-center user">
     @foreach($users as $user)
     <li class="user-block mb-4">
