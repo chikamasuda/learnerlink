@@ -76,7 +76,7 @@ class UserController extends Controller
         else {
             $users = null;
             $message = "検索結果はありません";
-            return view('search')->with([
+            return view('users.search')->with([
                 'message' => $message,
             ]);
         }
