@@ -16405,7 +16405,7 @@ readers do not read off random characters that represent icons */
   flex-wrap: wrap;
   width: 1040px;
   padding: 0;
-  margin: 30px 0 10px 20px;
+  margin: 30px 0 10px 0;
 }
 .user li {
   background: #fff;
@@ -16422,6 +16422,10 @@ readers do not read off random characters that represent icons */
 
 .search-form {
   width: 60%;
+}
+
+.search-form2 {
+  width: 45%;
 }
 
 .user-name {

@@ -11,7 +11,7 @@
     <form class="text-center mt-4 form" action="{{ url('/search') }}" method="get">
       {{ csrf_field() }}
       <div class="form-group d-flex justify-content-center">
-        <input type="text" class="form-control search-form" placeholder="ユーザーをキーワードで検索" rows="3">
+        <input type="text" class="form-control search-form" name="keyword" placeholder="名前、居住地、言語等で検索">
         <button type="submit" class="btn btn-info ml-1"><i class="fas fa-search"></i></button>
     </form>
   </div>

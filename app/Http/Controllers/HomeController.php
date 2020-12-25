@@ -31,8 +31,4 @@ class HomeController extends Controller
       $user_id = Auth::id(); // 追加
       return view('home', compact('users'));
    }
-   
-   
-   
-   
 }
