@@ -16510,6 +16510,10 @@ ul {
     margin-left: 20px;
     box-shadow: none;
   }
+
+  .search-form2 {
+    width: 60%;
+  }
 }
 .matchingNum {
   text-align: center;
@@ -16636,11 +16640,11 @@ img {
   }
 
   .fv-inner {
-    top: 15%;
+    top: 16%;
   }
 
   .matching-text {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 420px) {
