@@ -16346,23 +16346,6 @@ readers do not read off random characters that represent icons */
     width: 60%;
   }
 }
-.fv-image {
-  width: 100%;
-  position: relative;
-  background-image: url("../img/fv.jpg");
-  height: 35vh;
-  background-position: center;
-  background-size: cover;
-}
-.fv-image-inner {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 22%;
-  left: 50%;
-  font-size: 30px;
-  font-weight: bold;
-}
-
 .home-container {
   display: flex;
   flex-wrap: wrap;
@@ -16609,14 +16592,14 @@ img {
 
 .fv-pc {
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   position: relative;
 }
 
 .fv-inner {
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 22%;
+  top: 20%;
   left: 50%;
   font-size: 30px;
   font-weight: bold;
@@ -16716,7 +16699,7 @@ img {
   flex-direction: row-reverse;
 }
 .chatPage .messagesArea .message.selfMessage .commonMessage {
-  margin: 1.5em 15px 1.5em 0;
+  margin: 1.5em 15px 1.5em 15px;
   padding: 7px 10px;
   max-width: 100%;
   color: #555;
@@ -16735,7 +16718,7 @@ img {
 .chatPage .messagesArea .message .commonMessage {
   position: relative;
   display: inline-block;
-  margin: 20px 10px 10px 0px;
+  margin: 20px 10px 10px 0;
   padding: 7px 10px;
   color: #555;
   font-size: 15px;
@@ -16756,7 +16739,7 @@ img {
   border-right: 10px solid #f1f1f1;
 }
 .chatPage .messagesArea .message .commonMessage.selfMessage {
-  margin: 20px 10px 10px 0px;
+  margin: 20px 10px 10px 0;
   padding: 7px 10px;
   color: #555;
   font-size: 15px;

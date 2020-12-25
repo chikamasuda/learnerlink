@@ -30,12 +30,12 @@ $(document).ready(function() {
         if(e.message.user_id === user_id){
             console.log(true);
         $('.messages').append(
-            '<div class="message text-right"><div class="mycomment text-right"><div class="text-left">' +
+            '<div class="message"><div class="text-right"><div class="mycomment text-left">' +
             e.message.message + '</div></div></div>');
         }else{
             console.log(false);
         $('.messages').append(
-            '<div class="message"><img class="matching-image mr-3" src="data:image/png;base64,{{ $chat_room_user->image }}"><div class="commonMessage"><div>' +
+            '<div class="message"><div class="text-left"><img class="matching-image mr-3" src="data:image/png;base64,{{ $chat_room_user->image }}"><div class="commonMessage">' +
             e.message.message + '</div></div></div>');    
         }
     });
