@@ -16511,8 +16511,8 @@ ul {
     box-shadow: none;
   }
 
-  .search-form2 {
-    width: 60%;
+  .search-form, .search-form2 {
+    width: 75%;
   }
 }
 .matchingNum {
