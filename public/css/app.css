@@ -16615,6 +16615,13 @@ img {
 
 .matching-text {
   font-size: 40px;
+  margin: 0;
+  line-height: 1;
+}
+
+.sub-text {
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 .matching-container {
@@ -16644,7 +16651,7 @@ img {
   }
 
   .matching-text {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 420px) {

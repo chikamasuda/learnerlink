@@ -4,8 +4,9 @@
 <div class="home-container">
   <img class="fv-pc" src="../img/fv.jpg">
   <img class="fv-pd" src="../img/fv-pd.jpg">
-  <div class="fv-inner text-center col-sm-8 pt-5">
+  <div class="fv-inner text-center pt-5">
     <p class="matching-text">User list</p>
+    <p class="sub-text">ユーザー一覧</p>
   </div>
   <div>
     <form class="text-center mt-4 form" action="{{ url('/search') }}" method="get">

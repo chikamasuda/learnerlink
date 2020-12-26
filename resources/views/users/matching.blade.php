@@ -5,6 +5,7 @@
 <div><img class="fv-pd" src="../img/match-pd.jpg"></div>
 <div class="fv-inner text-center col-sm-8 pt-5">
   <p class="matching-text">Matching</p>
+  <p class="sub-text">マッチング</p>
 </div>
 <div class="container">
   <ul class="nav nav-tabs nav-justified mb-3 mt-5">
