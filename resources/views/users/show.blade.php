@@ -40,7 +40,7 @@
         <div class=" mt-3 text-info col-md-4">学んでいる言語</div><div class="mt-3 col-md-8">{{ $user -> language }}</div>
       </div>
       
-      <div class="text-center mt-5"><i class="fas fa-angle-double-left"></i><a href="/home" class="mt-5 ml-2 home-back">ユーザー一覧に戻る</a></div>
+      <div class="text-center mt-5"><a href="/home" class="mt-5 ml-2 home-back"><i class="fas fa-angle-double-left mr-2"></i>ユーザー一覧に戻る</a></div>
   </div>
 </div>
 

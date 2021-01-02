@@ -3,15 +3,18 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
-
+.matching-tab {
+    margin-top: 40px;
+}
 .pageTitle {
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
+    margin-top: 40px;
 }
 .matchingList {
     padding: 0;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 600px;
     .matchingPerson {
         display: flex;
         align-items: center;
@@ -138,5 +141,8 @@ img {
     
     .fv-inner {
         display: none;
+    }
+    .matching-tab {
+        margin-top: 30px;
     }
 }

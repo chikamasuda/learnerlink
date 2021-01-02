@@ -9,11 +9,20 @@
     <p class="sub-text">ユーザー一覧</p>
   </div>
   <div>
-    <form class="text-center mt-4 form" action="{{ url('/search') }}" method="get">
+    <form class="form" action="{{ url('/search') }}" method="get">
       {{ csrf_field() }}
-      <div class="form-group d-flex justify-content-center">
-        <input type="text" class="form-control search-form" name="keyword" placeholder="名前、居住地、言語等で検索">
-        <button type="submit" class="btn btn-info ml-1"><i class="fas fa-search"></i></button>
+      <div>
+        <div class="search-container">
+          <div>
+            <div class="search-inner">
+              <label class="mt-2 mr-2">キーワードから検索</label>
+              <div class="search-subinner">
+                <input type="text" class="form-control search-form" name="keyword" placeholder="名前、居住地、言語等で検索">
+                <button type="submit" class="btn btn-info ml-1 search-button">検索する</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </form>
   </div>
   <ul class="text-center user">

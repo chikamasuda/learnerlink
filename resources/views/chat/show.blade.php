@@ -41,11 +41,6 @@
         </div>
       @else
       <div class="text-left">
-        @if($chat_room_user->image)
-          <span><img class="matching-image mr-3" src="data:image/png;base64,{{ $chat_room_user->image }}"></span>
-        @else
-          <span><img class="mr-3 matching-image" src="{{ Gravatar::src($chat_room_user->email, 50) }}" alt=""></span>
-        @endif
         <div class="commonMessage">
           {{$message->message}}
         </div>

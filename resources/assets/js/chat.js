@@ -35,7 +35,7 @@ $(document).ready(function() {
         }else{
             console.log(false);
         $('.messages').append(
-            '<div class="message"><div class="text-left"><span><img class="matching-image mr-3" src="data:image/png;base64,{{ $chat_room_user->image }}"></span><div class="commonMessage">' +
+            '<div class="message"><div class="text-left"><div class="commonMessage">' +
             e.message.message + '</div></div></div>');    
         }
     });

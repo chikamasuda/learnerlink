@@ -8,14 +8,12 @@
     <p class="sub-text">マッチング</p>
   </div>
   <div class="container">
-    <ul class="nav nav-tabs nav-justified mb-3 mt-5">
+    <ul class="nav nav-tabs nav-justified mb-3 matching-tab">
       <li class="nav-item"><a href="{{ route('matching') }}" class="nav-link {{ Request::is('matching') ? 'active' : '' }}">マッチング成立</a></li>
       <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('index') ? 'active' : '' }}">いいねされてる</a></li>
     </ul>
-      
       <div class="active" id="#matching">
-        <div class="matchingNum text-info mt-3">{{ $like_users_count }}人にいいねされてます</div>
-        <h2 class="pageTitle">いいねされた人一覧</h2>
+        <h2 class="pageTitle"><i class="far fa-thumbs-up mr-2"></i>いいねされた人一覧</h2>
         <div class="matchingList mb-5">
           @foreach( $like_users as $user)
           <div class="matchingPerson">
