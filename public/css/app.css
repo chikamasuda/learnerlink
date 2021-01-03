@@ -10309,7 +10309,7 @@ h3 {
 .user {
   display: flex;
   flex-wrap: wrap;
-  width: 1000px;
+  width: 1040px;
   padding: 0;
   margin: 30px 0 10px 0;
 }
@@ -10332,6 +10332,7 @@ h3 {
   background: #fff;
   margin-left: 2%;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  width: 980px;
 }
 
 .search-inner {
