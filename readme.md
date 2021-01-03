@@ -1,14 +1,14 @@
-# Learnerlink
+# Learner link
 
 ## URL
 
-https://learnerlink.sakura.ne.jp/
+https://learner-link.com/
 
 ※ゲストログインページから登録なしでログインできます。
 
 ## Title
 
-LearnerLink
+Learner Link
 
 ## WEBアプリケーション概要
 
@@ -64,4 +64,4 @@ Webアプリケーション
 
 ・チャット機能（APIのpusherを使用）
 
-・機能テスト
+・機能テスト（一部のみ）

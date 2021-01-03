@@ -1,7 +1,7 @@
 <header>
   @if(Auth::check())
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
-      <h1><a class="navbar logo" href="/home">LearnerLink</a></h1>
+      <h1><a class="navbar logo" href="/home">Learner Link</a></h1>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
         <span class="navbar-toggler-icon navbar-light"></span>
       </button>
@@ -22,7 +22,7 @@
   </nav>
   @else
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
-    <h1><a class="navbar logo" href="/">LearnerLink</a></h1>
+    <h1><a class="navbar logo" href="/">Learner Link</a></h1>
     
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
       <span class="navbar-toggler-icon"></span>
