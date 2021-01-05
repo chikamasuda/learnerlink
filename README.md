@@ -28,8 +28,6 @@ Learner Link
 
 ・開発環境：Docker
 
-・サーバー：さくらインターネットサーバー
-
 ・バージョン管理：git/Github
 
 ・テスト：PHP Unit
