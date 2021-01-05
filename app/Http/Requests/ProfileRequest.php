@@ -3,8 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule; //ここを追加
-use Auth; //ここを追加
+use Illuminate\Validation\Rule; 
+use Auth; 
 
 
 class ProfileRequest extends FormRequest
@@ -29,7 +29,6 @@ class ProfileRequest extends FormRequest
         $myEmail = Auth::user()->email;
 
         return [
-            'name' => 'required|string|max:15',
             'email' => [
                 'required',
                 'string',
@@ -37,6 +36,7 @@ class ProfileRequest extends FormRequest
                 'max:255',
                 Rule::unique('users', 'email')->whereNot('email', $myEmail)
             ],
+            'name' => 'required|string|max:15',
             'language' => 'required|string|max:15',
             'address' => 'required|string|max:15',
             'self_introduction' => 'required|string|max:255',

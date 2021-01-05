@@ -25,13 +25,9 @@ class UserController extends Controller
         return view('users.edit', compact('user'));
     }
 
-    public function update($id, ProfileRequest $request)
-    {
-        $user = User::findorFail($id);
-
-        if ($request->image != null) {
-            $user->image = base64_encode(file_get_contents($request->user_profile_photo));
-        }
+    public function update(ProfileRequest $request)
+    { 
+        $user = User::find($request->id);
 
         $user->name = $request->name;
         $user->email = $request->email;
@@ -39,9 +35,14 @@ class UserController extends Controller
         $user->language = $request->language;
         $user->address = $request->address;
         $user->self_introduction = $request->self_introduction;
+        
+        if ($request->user_profile_photo !=null) {
+            $user->image = base64_encode(file_get_contents($request->user_profile_photo));
+        }
+        
         $user->save();
 
-        return redirect('/home');
+        return redirect('home');
     }
 
     public function delete($id)
