@@ -13,6 +13,7 @@
     <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('index') ? 'active' : '' }}">いいねされてる</a></li>
   </ul>
   <div class="mt-3 active" id="#matching">
+    <div class="matchingNum text-info mt-4">{{ $match_users_count }}人とマッチングしています</div>
     <h2 class="pageTitle"><i class="fa fa-l fa-handshake mr-2"></i>マッチング成立一覧</h2>
     <div class="matchingList mb-5">
       @foreach( $matching_users as $user)
