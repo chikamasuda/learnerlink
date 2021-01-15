@@ -36,9 +36,9 @@ class ProfileRequest extends FormRequest
                 'max:255',
                 Rule::unique('users', 'email')->whereNot('email', $myEmail)
             ],
-            'name' => 'required|string|max:15',
-            'language' => 'required|string|max:15',
-            'address' => 'required|string|max:15',
+            'name' => 'required|string|max:12',
+            'language' => 'required|string|max:12',
+            'address' => 'required|string|max:12',
             'self_introduction' => 'required|string|max:255',
         ];
     }

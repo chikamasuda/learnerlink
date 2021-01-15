@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Http\Requests\UserCreateRequest;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -41,40 +41,25 @@ class RegisterController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|string|max:15',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'address' => 'required|string|max:15',
-            'language' => 'required|string|max:15',
-            'self_introduction' => 'string|max:255', 
-        ]);
-    }
-    
-    /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  UserCreateRequest $request
      * @return \App\User
      */
-    protected function create(array $data)
+    public function register(UserCreateRequest $request)
     {
-        //createメソッドでユーザー情報を作成
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-            'self_introduction' => $data['self_introduction'],
-            'sex' => $data['sex'],
-            'language' =>$data['language'],
-            'address' =>$data['address'],
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'self_introduction' => $request->self_introduction,
+            'sex' => $request->sex,
+            'language' => $request->language,
+            'address' => $request->address,
         ]);
+
+        $this->guard()->login($user);
+
+        return redirect('home');
     }
 }

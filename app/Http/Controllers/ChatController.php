@@ -64,5 +64,3 @@ class ChatController extends Controller
         event(new ChatPusher($chat));
     }
 }
-
-  
