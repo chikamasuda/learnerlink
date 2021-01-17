@@ -91,4 +91,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\ChatRoomUsers');
     }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

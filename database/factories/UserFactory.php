@@ -21,6 +21,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'sex' => '男性',
         'address' => '東京都',
         'language' => 'PHP',
+        'self_introduction' => 'PHPを勉強しています。',
         'remember_token' => str_random(10),
     ];
 });
