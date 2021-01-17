@@ -40,6 +40,7 @@
   .messagesArea {
     overflow: scroll;
     height: 75vh;
+    padding-bottom: 20px;
     .message {
       &.selfMessage {
         display: flex;
@@ -112,8 +113,7 @@
     padding: 30px 0;
     width: 100%;
     &_input {
-      width: 100%;
-      border: none;
+      width: 80%;
     }
   }
 }
@@ -138,14 +138,5 @@
   margin-top: -10px;
   border: 10px solid transparent;
   border-left: 10px solid #30e852;
-  }
-}
-
-
-
-@media screen and (max-width:420px){
-  .messagesArea {
-    overflow: scroll;
-    height: 60vh;
   }
 }

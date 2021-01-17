@@ -4,24 +4,21 @@ $(document).ready(function() {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-    $('.messageInputForm_input').keypress(function (event) {
-        if(event.which === 13){
-            event.preventDefault();
-            $.ajax({
-                type: 'POST',
-                url: '/chat/chat',
-                data: {
-                    chat_room_id: chat_room_id,
-                    user_id: user_id,
-                    message: $('.messageInputForm_input').val(),
-                },
-            })
-            
-            .done(function(data){
-                //console.log(data);
-                event.target.value = '';
-            });
-        }
+    $('.chat-submit').click(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '/chat/chat',
+            data: {
+                chat_room_id: chat_room_id,
+                user_id: user_id,
+                message: $('.messageInputForm_input').val(),
+            },
+        })
+        
+        .done(function(){
+            $('.messageInputForm_input').val("");
+        });
     });
 
     window.Echo.channel('ChatRoomChannel')
