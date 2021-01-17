@@ -26,9 +26,16 @@ class ProfileRequest extends FormRequest
      */
     public function rules()
     {
+        $myEmail = Auth::user()->email;
         return [
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:255',
+                Rule::unique('users', 'email')->whereNot('email', $myEmail)
+            ],
             'name' => 'required|string|max:12',
-            'email' => 'required|string|email|max:255|unique:users',
             'language' => 'required|string|max:12',
             'address' => 'required|string|max:12',
             'self_introduction' => 'required|string|max:255',
