@@ -54,8 +54,8 @@
   <form class="messageInputForm mx-auto" method="POST" action="/chat/chat">
     {{ csrf_field() }}
     <div class='container d-flex justify-content-center'>
-      <input type="text" class="messageInputForm_input form-control" placeholder="メッセージを入力...">
-      <button type="submit" class="chat-submit btn btn-md bg-info text-white ml-1">送信</button>
+      <textarea class="messageInputForm_input form-control" placeholder="メッセージを入力..."></textarea>
+      <button type="submit" class="chat-submit btn btn-md bg-info text-white ml-1 pl-3 pr-3" style="height: 40px;">送信</button>
     </div>
   </form>
 </div>

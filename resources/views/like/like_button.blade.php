@@ -1,13 +1,16 @@
 @if (Auth::id() != $user->id)
   @if (Auth::user()->is_like($user->id))
-    {!! Form::open(['route' => ['user.dislike',$user->id], 'method' => 'delete']) !!}
-      {!! Form::submit('いいねを取り消す', ['class' => "btn btn-danger user-button mb-3 dislike" ]) !!}
-    {!! Form::close() !!}
+    <form method="POST" action="{{ route('user.dislike',$user->id) }}" accept-charset="UTF-8">
+      {{ csrf_field() }}
+      <input name="_method" type="hidden" value="DELETE">
+      <input class="btn btn-danger user-button mb-3 dislike" type="submit" value="いいねを取り消す">
+    </form>
  
   @else
-    {!! Form::open(['route' => ['user.like',$user->id]]) !!}
-      {!! Form::submit('いいね！', ['class' => "btn btn-info user-button mb-3 like"]) !!}
-    {!! Form::close() !!}
+    <form  method="POST" action="{{ route('user.like',$user->id) }}" >
+    {{ csrf_field() }}
+      <button type="submit" class="btn btn-info user-button mb-3 like"><i class="far fa-thumbs-up text-white mr-2"></i>いいね！</button>
+    </form>
   @endif
 @endif   
   

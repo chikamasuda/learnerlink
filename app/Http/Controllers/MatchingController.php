@@ -11,7 +11,6 @@ use Auth;
 class MatchingController extends Controller
 {
     public static function index() {
-        
         $got_reaction_ids = Reaction::where([
             ['like_id', Auth::id()], //like_idがログイン中のユーザーIDになる
             ])->pluck('user_id');
@@ -24,4 +23,5 @@ class MatchingController extends Controller
         $match_users_count = count($matching_users);
         return view('users.matching', compact('matching_users', 'match_users_count'));
     }
+
 }
