@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div><img class="fv-pc" src="../img/matching.jpg"></div>
-<div><img class="fv-pd" src="../img/match-pd.jpg"></div>
+<div><img class="fv-pc" src="../img/tweet.jpg"></div>
+<div><img class="fv-pd" src="../img/tweet-pd.jpg"></div>
 <div class="fv-inner text-center col-sm-8 pt-5">
   <p class="matching-text">Tweet list</p>
   <p class="sub-text">つぶやき一覧</p>
 </div>
 <div class="edit mb-5 post-page">
   <div class="text-center bg-info">
-    <h2 class="edit-title text-white">Tweets</h2>
+    <h2 class="edit-title text-white">つぶやき一覧</h2>
   </div>
   <div class="container">
     <div class="row">
