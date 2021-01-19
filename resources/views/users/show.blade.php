@@ -28,7 +28,7 @@
       </div>
       <div class='profile profile-top userInfo_selfIntroduction row'> 
         <div class="text-info col-md-4">自己紹介文</div>
-        <div class="mt-1 selfIntroduction col-md-8">{{ $user -> self_introduction }}</div>
+        <div class="selfIntroduction col-md-8">{{ $user -> self_introduction }}</div>
       </div>
       <div class='profile d-flex flex-row justify-content-start'>
         <div class="text-info col-md-4">性別</div><div class="col-md-8">{{ $user -> sex }}</div>

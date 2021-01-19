@@ -44,11 +44,11 @@
           <label>学んでいる言語</label>
           <input type="text" name="language" class="form-control" value="{{ $user->language }}">
         </div>
-        <div class="form-group">
+        <div class="form-group mt-3">
           <label>自己紹介</label>
           <textarea class="form-control" name="self_introduction" rows="7">{{ $user->self_introduction }}</textarea>
         </div>
-        <div class="text-center">
+        <div class="text-center mt-3">
           <button type="submit" class="btn submitBtn btn-lg btn-info mb-3">プロフィールを変更する</button>
         </div>
       </form>
