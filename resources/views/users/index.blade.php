@@ -21,7 +21,7 @@
           </p>
           @else
           <div class="text-center pt-3 pb-2">
-            <img class="profile-image" src="{{ Gravatar::src(Auth::user()->email, 300) }}" alt="">
+            <img class="profile-image" src="{{ Gravatar::src(Auth::user()->email, 500) }}" alt="">
           </div>
           @endif
         </div>

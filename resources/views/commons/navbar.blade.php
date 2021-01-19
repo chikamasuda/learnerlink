@@ -10,6 +10,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a href="/home" class="nav-right">ユーザー一覧</a></li>
           <li class="nav-item">{!! link_to_route('matching', 'マッチング',[],  ['class'=>'nav-right']) !!}</li>
+          <li class="nav-item"><a href="/posts" class="nav-right">つぶやき一覧</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-right dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}</a>
             <ul class="dropdown-menu dropdown-menu-right">
