@@ -32,6 +32,7 @@
               <div><img class="matching-image" src="{{ Gravatar::src($post->user->email, 40) }}" alt=""></div>
               @endif
               <div class="post-name text-center ml-2 mr-2">{{ $post->user->name }}</div>
+              <small class="post-time">{{ date('Y/m/d H:i', strtotime($post->updated_at)) }}</small>
             </div>
             <p class="post-content">{{ $post->content }}</p>
             @if($post->user->id == Auth::id())
