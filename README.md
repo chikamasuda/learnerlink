@@ -4,7 +4,7 @@
 
 レスポンシブにも対応しています。
 
-<img width="375" alt="スクリーンショット 2021-01-20 16 22 15" src="https://user-images.githubusercontent.com/66733811/105140908-b6065b00-5b3b-11eb-9b77-3f2961de4016.png">
+<img width="200" alt="スクリーンショット 2021-01-20 16 22 15" src="https://user-images.githubusercontent.com/66733811/105140908-b6065b00-5b3b-11eb-9b77-3f2961de4016.png">
 
 
 ## URL
