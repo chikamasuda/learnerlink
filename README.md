@@ -2,6 +2,8 @@
 
 <img width="500" alt="スクリーンショット 2021-01-20 16 10 03" src="https://user-images.githubusercontent.com/66733811/105139978-5c516100-5b3a-11eb-8c3f-7677cb6d52a6.png">
 
+レスポンシブにも対応しています。
+
 ## URL
 
 https://learner-link.com/
