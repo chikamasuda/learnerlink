@@ -44,6 +44,8 @@ Learner Link
 
 ・Web API：Pusher
 
+・Webサーバー：Nginx
+
 ## 制作物
 
 Webアプリケーション
