@@ -42,7 +42,7 @@ Learner Link
 
 ・テスト：PHP Unit
 
-・Web API：Pusher
+・外部API：Pusher
 
 ## 制作物
 
@@ -74,7 +74,7 @@ Webアプリケーション
 
 ・マッチング機能
 
-・チャット機能（WEB APIのPusherを使用。メッセージのPOST送信はAjaxを使用して実装。）
+・チャット機能（外部APIのPusherを使用。メッセージのPOST送信はAjaxを使用して実装。）
 
 ・検索機能
 
