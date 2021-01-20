@@ -38,7 +38,7 @@ Learner Link
 
 ・開発環境：Docker(Laradock)
 
-・バージョン管理：git/Github
+・バージョン管理：git/GitHub
 
 ・テスト：PHP Unit
 
