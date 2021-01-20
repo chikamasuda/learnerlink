@@ -4,6 +4,8 @@
 
 レスポンシブにも対応しています。
 
+<img width="277" alt="スクリーンショット 2021-01-20 16 10 59" src="https://user-images.githubusercontent.com/66733811/105140443-0e892880-5b3b-11eb-9402-e1c7f9e8260b.png">
+
 ## URL
 
 https://learner-link.com/
