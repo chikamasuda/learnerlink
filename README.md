@@ -36,8 +36,6 @@ Learner Link
 
 ・データベース：MySQL
 
-・Webサーバー：Nginx
-
 ・開発環境：Docker
 
 ・バージョン管理：git/GitHub
