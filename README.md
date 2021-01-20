@@ -74,7 +74,7 @@ Webアプリケーション
 
 ・マッチング機能
 
-・チャット機能（WEB APIのpusherを使用。Ajaxで実装。）
+・チャット機能（WEB APIのpusherを使用。AjaxでメッセージのPOST送信を実装。）
 
 ・検索機能
 
