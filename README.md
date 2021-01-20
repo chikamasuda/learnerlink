@@ -32,6 +32,8 @@ Learner Link
 
 ・テスト：PHP Unit
 
+・Web API:Pusher
+
 ## 制作物
 
 Webアプリケーション
@@ -62,7 +64,7 @@ Webアプリケーション
 
 ・マッチング機能
 
-・チャット機能（WEB APIのpusherを使用。メッセージの送受信を、Ajaxを使った非同期通信で実装。）
+・チャット機能（WEB APIのpusherを使用。Ajaxで実装。）
 
 ・検索機能
 
