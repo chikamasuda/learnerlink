@@ -26,7 +26,7 @@ Learner Link
 
 ・データベース：MySQL
 
-・開発環境：Docker
+・開発環境：Docker(LaraDock)
 
 ・バージョン管理：git/Github
 
