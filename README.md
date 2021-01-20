@@ -32,7 +32,7 @@ Learner Link
 
 ・テスト：PHP Unit
 
-・Web API:Pusher
+・Web API：Pusher
 
 ## 制作物
 
