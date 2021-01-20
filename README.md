@@ -4,7 +4,7 @@
 
 レスポンシブにも対応しているので、スマートフォンから見ることもできます。
 
-![alt-text-1](<img width="200" alt="スクリーンショット 2021-01-20 16 22 15" src="https://user-images.githubusercontent.com/66733811/105140908-b6065b00-5b3b-11eb-9b77-3f2961de4016.png">)![alt-text-2](<img width="200" alt="スクリーンショット 2021-01-20 16 33 09" src="https://user-images.githubusercontent.com/66733811/105142131-89ebd980-5b3d-11eb-8e84-e42c8e5b83b3.png">)
+<img width="200" alt="スクリーンショット 2021-01-20 16 22 15" src="https://user-images.githubusercontent.com/66733811/105140908-b6065b00-5b3b-11eb-9b77-3f2961de4016.png">
 
 
 ## URL
