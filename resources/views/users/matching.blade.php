@@ -27,7 +27,7 @@
         </div>
       </div>
     </aside>
-    <div class="col-sm-8">
+    <div class="col-sm-8 mb-5">
       <ul class="nav nav-tabs nav-justified mb-3 matching-tab">
         <li class="nav-item"><a href="{{ route('matching') }}" class="nav-link {{ Request::is('matching') ? 'active' : '' }}">マッチング成立</a></li>
         <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('index') ? 'active' : '' }}">いいねされてる</a></li>
