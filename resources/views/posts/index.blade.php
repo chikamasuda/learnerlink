@@ -19,7 +19,7 @@
           <div class="mt-4">
             <label class="post-title">近況を投稿しましょう</label>
             <textarea class="form-control" name="content" style="white-space: pre-wrap;"></textarea>
-            <input type="file" class="mt-3" name="image" accept="image/jpeg,image/jpg,image/png,image/svg">
+            <input type="file" class="mt-3" name="image" accept="image/jpeg,image/gif,image/png">
           </div>
           <div class="text-center">
             <button type="submit" class="btn pl-5 pr-5 btn-info mt-3">投稿する</button>

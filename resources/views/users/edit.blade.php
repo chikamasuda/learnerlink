@@ -15,7 +15,7 @@
             <img class="user-image" src="data:image/png;base64,{{ $user->image }}" alt="avatar">
           </p>
           @endif
-          <input type="file" name="user_profile_photo" value="{{ old('user_profile_photo', $user->id) }}" accept="image/jpeg,image/jpg,image/png,image/svg">
+          <input type="file" name="user_profile_photo" value="{{ old('user_profile_photo', $user->id) }}" accept="image/jpeg,image/gif,image/png">
         </div>
         <div class="form-group mb-3">
           <label>名前</label>
