@@ -9,7 +9,7 @@
     <div class="col-sm-6 offset-sm-3">
       <form class="form" method="POST" action="{{ route('signup.post') }}" enctype="multipart/form-data">
         {{ csrf_field() }}
-        <div class="form-group mb-3">
+        <div class="form-group mb-3 mt-5">
           <label>名前</label>
           <input type="text" name="name" class="form-control">
         </div>
@@ -18,8 +18,7 @@
           <label>メールアドレス</label>
           <input type="email" name="email" class="form-control">
         </div>
-
-        <div>
+        <div class="form-group mb-3">
           <label>パスワード</label>
           <em>6文字以上入力してください</em>
           <input type="password" name="password" class="form-control">
@@ -44,11 +43,11 @@
           <label>居住地</label>
           <input type="text" name="address" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group mb-3">
           <label>学んでいる言語</label>
           <input type="text" name="language" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group mb-3">
           <label>自己紹介</label>
           <textarea class="form-control" name="self_introduction" rows="7"></textarea>
         </div>

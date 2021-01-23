@@ -38,6 +38,7 @@
               <small class="post-time">{{ $post->created_at }}</small>
             </div>
             <p class="post-content">{{ $post->content }}</p>
+            <img src="/storage/posts/{{ $post->image }}" alt="">
             @if($post->user->id == Auth::id())
             <div class="d-flex justify-content-end mb-3">
               <a href="/posts/edit/{{$post->id}}">

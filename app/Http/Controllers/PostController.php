@@ -2,50 +2,53 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+use App\Http\Controllers\Controller;
 
 
 class PostController extends Controller
 {
-    public function index()
-    {
-        $posts = Post::all() ;
-        $posts = Post::orderBy('created_at', 'desc')->paginate(5);
-        return view('posts.index',['posts' => $posts]);
-    }
+  public function index()
+  {
+    $posts = Post::all();
+    $posts = Post::orderBy('created_at', 'desc')->paginate(5);
+    return view('posts.index', ['posts' => $posts]);
+  }
 
-    public function add(Request $request)
-    {
-        $post = new Post;
-        $post->user_id = Auth::user()->id;
-        $post->content = $request->content;
-        $post->save();
+  public function add(PostRequest $request)
+  {
+    $post = new Post;
+    $post->user_id = Auth::user()->id;
+    $post->content = $request->content;
+    $post->image = $request->file('image')->store('public/posts');
+    $post->save();
 
-        return redirect('posts');
-    }
+    return redirect('posts');
+  }
 
-    public function edit($id)
-    {
-        $post = Post::find($id);
+  public function edit($id)
+  {
+    $post = Post::find($id);
 
-        return view('posts.edit', ['post' => $post]);
-    }
+    return view('posts.edit', ['post' => $post]);
+  }
 
-    public function update(Request $request)
-    {
-        $post = Post::find($request->id);
-        $post->content = $request->content;
-        $post->save();
+  public function update(PostRequest $request)
+  {
+    $post = Post::find($request->id);
+    $post->content = $request->content;
+    $post->image = $request->file('image')->store('public/posts');
+    $post->save();
 
-        return redirect('posts');
-    }
+    return redirect('posts');
+  }
 
-    public function delete($id)
-    {
-        $post = Post::find($id);
-        $post->delete();
-        return redirect('posts');
-    }
+  public function delete($id)
+  {
+    $post = Post::find($id);
+    $post->delete();
+    return redirect('posts');
+  }
 }
