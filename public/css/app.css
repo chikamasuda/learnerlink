@@ -10830,6 +10830,11 @@ img {
   margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .post-container {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 420px) {
   .post-page {
     margin-top: 30px;
