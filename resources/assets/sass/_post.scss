@@ -6,6 +6,17 @@
     margin-top: 50px;
   }
 }
+.post-maintitle {
+  font-size: 24px;
+  padding: 15px 0;
+}
+
+.post-container {
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
 
 .post-time{
   margin-top: 19px;
@@ -26,7 +37,7 @@
 
 .post-content {
   font-size: 18px;
-  padding-top: 10px;
+  padding-top: 15px;
   margin-bottom: 15px;
   white-space: pre-wrap;
 }

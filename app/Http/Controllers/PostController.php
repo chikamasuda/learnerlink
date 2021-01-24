@@ -22,7 +22,13 @@ class PostController extends Controller
     $post = new Post;
     $post->user_id = Auth::user()->id;
     $post->content = $request->content;
-    $post->image = $request->file('image')->store('public/posts');
+    $originalImg = $request->image;
+
+    if($originalImg != null) {
+      $filePath = $originalImg->store('public');
+      $post->image = str_replace('public/', '', $filePath);
+    }
+
     $post->save();
 
     return redirect('posts');
@@ -39,7 +45,13 @@ class PostController extends Controller
   {
     $post = Post::find($request->id);
     $post->content = $request->content;
-    $post->image = $request->file('image')->store('public/posts');
+    $originalImg = $request->image;
+
+    if($originalImg != null) {
+      $filePath = $originalImg->store('public');
+      $post->image = str_replace('public/', '', $filePath);
+    }
+    
     $post->save();
 
     return redirect('posts');

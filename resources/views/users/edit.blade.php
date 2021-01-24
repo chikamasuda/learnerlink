@@ -7,7 +7,7 @@
   <div class="row" style="margin:0">
     <div class="col-sm-6 offset-sm-3">
       <form class="form" method="POST" action="/users/update/{{ $user->id }}" enctype="multipart/form-data">
-        {{ csrf_field() }}
+        @csrf
         <div class="form-group mb-3 mt-3">
           <label for="">プロフィール写真</label><br>
           @if ($user->image)
@@ -15,7 +15,7 @@
             <img class="user-image" src="data:image/png;base64,{{ $user->image }}" alt="avatar">
           </p>
           @endif
-          <input type="file" name="user_profile_photo" value="{{ old('user_profile_photo', $user->id) }}" accept="image/jpeg,image/gif,image/png">
+          <input type="file" name="user_profile_photo" accept="image/jpeg,image/gif,image/png">
         </div>
         <div class="form-group mb-3">
           <label>名前</label>

@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
       <form class="form" method="POST" action="{{ route('signup.post') }}" enctype="multipart/form-data">
-        {{ csrf_field() }}
+        @csrf
         <div class="form-group mb-3 mt-5">
           <label>名前</label>
           <input type="text" name="name" class="form-control">

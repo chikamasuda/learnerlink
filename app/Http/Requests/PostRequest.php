@@ -33,7 +33,6 @@ class PostRequest extends FormRequest
     {
         return [
             'content.required' => '投稿文を入力してください',
-            'image.max' => '画像は横幅2048px以下にしてください。',
         ];
     }
 

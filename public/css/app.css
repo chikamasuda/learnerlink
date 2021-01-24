@@ -10539,9 +10539,7 @@ ul {
 }
 
 .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
   background-color: #17a2b8;
-  border: none;
   color: #fff;
 }
 
@@ -10788,6 +10786,18 @@ img {
   margin-top: 50px;
 }
 
+.post-maintitle {
+  font-size: 24px;
+  padding: 15px 0;
+}
+
+.post-container {
+  background: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
 .post-time {
   margin-top: 19px;
   line-height: 1;
@@ -10807,7 +10817,7 @@ img {
 
 .post-content {
   font-size: 18px;
-  padding-top: 10px;
+  padding-top: 15px;
   margin-bottom: 15px;
   white-space: pre-wrap;
 }

@@ -13,13 +13,24 @@
           <div class="form-group mt-3">
             <label class="post-title">近況をつぶやきましょう。</label>
             <textarea class="form-control" name="content" rows="3">{{ $post->content }}</textarea>
-            <button type="submit" class="btn pl-5 pr-5 btn-info mt-2">投稿を編集する</button>
+          </div>
+          <div class="form-group mb-3 mt-3">
+            <label for="">投稿写真</label><br>
+            @if ($post->image)
+            <div>
+              <img class="mb-3" src="/storage/{{ $post->image }}" alt="">
+            </div>
+            @endif
+            <input type="file" name="image" accept="image/jpeg,image/gif,image/png">
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn pl-5 pr-5 btn-info mt-3">投稿を編集する</button>
           </div>
         </form>
-        <div class="mb-3 mt-2 text-center">
+        <div class="mb-3 mt-3 text-center">
           <a href="/posts">つぶやき一覧に戻る</a>
         </div>
       </div>
     </div>
   </div>
-@endsection
+  @endsection
