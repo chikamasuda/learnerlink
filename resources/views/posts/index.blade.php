@@ -19,7 +19,7 @@
           <div class="mt-4">
             <label class="post-title">近況を投稿しましょう</label>
             <textarea class="form-control" name="content" style="white-space: pre-wrap;"></textarea>
-            <!-- <input type="file" class="mt-3" name="image" accept="image/jpeg,image/gif,image/png"> -->
+            <input type="file" class="mt-3" name="image" accept="image/jpeg,image/gif,image/png">
           </div>
           <div class="text-center">
             <button type="submit" class="btn pl-5 pr-5 btn-info mt-3">投稿する</button>
@@ -38,7 +38,9 @@
               <small class="post-time">{{ $post->created_at }}</small>
             </div>
             <p class="post-content">{{ $post->content }}</p>
-            <!-- <img class="mb-4" src="/storage/{{ $post->image }}" alt=""> -->
+            @if ($post->image)
+            <img src="data:image/png;base64,{{ $post->photo }}" class="mb-4">
+            @endif
             @if($post->user->id == Auth::id())
             <div class="d-flex justify-content-end mb-4">
               <a href="/posts/edit/{{$post->id}}">
