@@ -39,7 +39,7 @@
             </div>
             <p class="post-content">{{ $post->content }}</p>
             @if ($post->image)
-            <img src="data:image/png;base64,{{ $post->photo }}" class="mb-4">
+            <img src="data:image/png;base64,{{ $post->image }}" class="mb-4">
             @endif
             @if($post->user->id == Auth::id())
             <div class="d-flex justify-content-end mb-4">

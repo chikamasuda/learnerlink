@@ -36,10 +36,8 @@ class UserController extends Controller
         $user->address = $request->address;
         $user->self_introduction = $request->self_introduction;
 
-        if($request->user_profile_photo !=null) {
-            $request->user_profile_photo->storeAs('public/user_images',$user->id. '.jpg');
-            $user->profile_photo = $user->id . '.jpg';
-            $user->image = base64_encode(file_get_contents($request->user_profile_photo));
+        if($request->image !=null) {
+            $user->image = base64_encode(file_get_contents($request->image));
         }
         
         $user->save();

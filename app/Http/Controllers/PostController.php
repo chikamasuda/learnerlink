@@ -24,9 +24,7 @@ class PostController extends Controller
     $post->content = $request->content;
 
     if($request->image != null) {
-      $filePath = $request->image->store('public');
-      $post->image = str_replace('public/', '', $filePath);
-      $post->photo = base64_encode(file_get_contents($request->image));
+      $post->image = base64_encode(file_get_contents($request->image));
     }
 
     $post->save();
@@ -47,9 +45,7 @@ class PostController extends Controller
     $post->content = $request->content;
 
     if($request->image != null) {
-      $filePath = $request->image->store('public');
-      $post->image = str_replace('public/', '', $filePath);
-      $post->photo = base64_encode(file_get_contents($request->image));
+      $post->image = base64_encode(file_get_contents($request->image));
     }
     
     $post->save();

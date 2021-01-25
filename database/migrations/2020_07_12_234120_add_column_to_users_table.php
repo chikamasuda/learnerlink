@@ -18,6 +18,7 @@ class AddColumnToUsersTable extends Migration
             $table->string('sex');
             $table->string('address');
             $table->string('language');
+            $table->longText('image')->nullable();
         });
     }
 
