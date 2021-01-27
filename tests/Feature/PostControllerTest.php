@@ -24,65 +24,42 @@ class PostControllerTest extends TestCase
     }
 
     /**
-     * PostControllerのCRUD処理のルート確認
+     * PostControllerのルート確認
      */
     public function testPostPath()
     {
-        //投稿一覧画面のルート確認
+        //投稿一覧
         $response = $this->dummyLogin();
         $response = $this->get('/posts');
         $response->assertStatus(200);
 
-        //投稿追加のルート確認
-        $post = [
-            'content' => '投稿',
-            'id' => 1,
-        ];
-
-        //まだ投稿データはDBに入っていないかテスト
-        $this->assertDatabaseMissing('posts', $post);
-
         //投稿追加
+        $post = ['content' => '投稿', 'id' => 1,];
+        $this->assertDatabaseMissing('posts', $post);
         $response = $this->post('/posts/add/', $post);
-
-        //投稿データがDBに入っているかテスト
         $this->assertDatabaseHas('posts', $post);
-
-        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
-            ->assertRedirect('/posts');
+                 ->assertRedirect('/posts');
 
-        //編集詳細画面表示のルート確認
+        //投稿詳細
         $response = $this->get('/posts/edit/1');
         $response->assertStatus(200);
 
-        //存在しないIDを指定した場合のルート確認
+        //存在しない投稿IDを指定した場合のルート確認
         $response = $this->get('/posts/edit/0');
         $response->assertStatus(404);
 
-        //以下から投稿更新のルート確認
-        $post = [
-            'content' => '編集',
-        ];
-
-        //投稿を更新
+        //投稿編集
+        $post = ['content' => '編集'];
         $response = $this->post('/posts/update/1', $post);
-
-        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
-            ->assertRedirect('/posts');
-
-        //投稿データがDBに入っているかテスト
+                 ->assertRedirect('/posts');
         $this->assertDatabaseHas('posts', $post);
 
         //投稿削除
         $response = $this->delete('/posts/delete/1');
-
-        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
-            ->assertRedirect('/posts');
-
-        //投稿データがDBから削除されたかテスト
+                 ->assertRedirect('/posts');
         $this->assertDatabaseMissing('posts', $post);
     }
 }
