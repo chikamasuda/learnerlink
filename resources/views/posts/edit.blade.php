@@ -9,7 +9,7 @@
     <div class="row">
       <div class="col-sm-12">
         <form method="POST" action="{{ route('posts.update', $post->id) }}" enctype="multipart/form-data">
-          {{ csrf_field() }}
+          @csrf
           <div class="form-group mt-3">
             <label class="post-title">近況をつぶやきましょう。</label>
             <textarea class="form-control" name="content" rows="3">{{ $post->content }}</textarea>
