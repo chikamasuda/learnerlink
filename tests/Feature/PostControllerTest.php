@@ -28,6 +28,7 @@ class PostControllerTest extends TestCase
      */
     public function testPostPath()
     {
+        //投稿一覧画面のルート確認
         $response = $this->dummyLogin();
         $response = $this->get('/posts');
         $response->assertStatus(200);
@@ -38,18 +39,20 @@ class PostControllerTest extends TestCase
             'id' => 1,
         ];
 
-        //まだ投稿データはDBに入っていない
+        //まだ投稿データはDBに入っていないかテスト
         $this->assertDatabaseMissing('posts', $post);
 
+        //投稿追加
         $response = $this->post('/posts/add/', $post);
 
         //投稿データがDBに入っているかテスト
         $this->assertDatabaseHas('posts', $post);
 
+        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
             ->assertRedirect('/posts');
 
-        //編集画面表示のルート確認
+        //編集詳細画面表示のルート確認
         $response = $this->get('/posts/edit/1');
         $response->assertStatus(200);
 
@@ -57,19 +60,25 @@ class PostControllerTest extends TestCase
         $response = $this->get('/posts/edit/0');
         $response->assertStatus(404);
 
-        //投稿の更新のルート確認
+        //以下から投稿更新のルート確認
         $post = [
             'content' => '編集',
         ];
+
+        //投稿を更新
         $response = $this->post('/posts/update/1', $post);
+
+        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
             ->assertRedirect('/posts');
 
         //投稿データがDBに入っているかテスト
         $this->assertDatabaseHas('posts', $post);
 
-        //投稿削除のルート確認
+        //投稿削除
         $response = $this->delete('/posts/delete/1');
+
+        //投稿一覧画面にリダイレクト
         $response->assertStatus(302)
             ->assertRedirect('/posts');
 
