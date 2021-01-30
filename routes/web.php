@@ -22,15 +22,12 @@ Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('guest', 'Auth\LoginController@authenticate')->name('guest');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
-
 Route::group(['prefix' =>'users', 'middleware' => 'auth'], function(){
     Route::get('show/{id}', 'UserController@show')->name('users.show');
     Route::get('edit/{id}', 'UserController@edit')->name('users.edit');
     Route::post('update/{id}', 'UserController@update')->name('users.update');
-    Route::delete('delete/{id}', 'UserController@delete')->name('users.delete');
-    
+    Route::delete('delete/{id}', 'UserController@delete')->name('users.delete');    
 });
-
 
 Route::group(['prefix' => 'users/{id}'], function () {
     Route::post('like', 'ReactionController@store')->name('user.like');
@@ -38,15 +35,15 @@ Route::group(['prefix' => 'users/{id}'], function () {
 });
 
 Route::group(['middleware' => 'auth'], function(){
-Route::get('home', 'HomeController@index')->name('home');
-Route::get('matching', 'MatchingController@index')->name('matching'); 
-Route::get('index', 'UserController@index')->name('users.index');
-Route::get('search', 'UserController@search');
-Route::get('posts', 'PostController@index')->name('posts.index');
-Route::post('posts/add', 'PostController@add')->name('posts.add');
-Route::get('posts/edit/{id}', 'PostController@edit')->name('posts.edit');
-Route::post('posts/update/{id}', 'PostController@update')->name('posts.update');
-Route::delete('posts/delete/{id}', 'PostController@delete')->name('posts.delete');
+    Route::get('home', 'HomeController@index')->name('home');
+    Route::get('matching', 'MatchingController@index')->name('matching'); 
+    Route::get('index', 'UserController@index')->name('users.index');
+    Route::get('search', 'UserController@search');
+    Route::get('posts', 'PostController@index')->name('posts.index');
+    Route::post('posts/add', 'PostController@add')->name('posts.add');
+    Route::get('posts/edit/{id}', 'PostController@edit')->name('posts.edit');
+    Route::post('posts/update/{id}', 'PostController@update')->name('posts.update');
+    Route::delete('posts/delete/{id}', 'PostController@delete')->name('posts.delete');
 });
 
 Route::group(['prefix' => 'chat', 'middleware' => 'auth'], function(){
