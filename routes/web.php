@@ -40,10 +40,13 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('index', 'UserController@index')->name('users.index');
     Route::get('search', 'UserController@search');
     Route::get('posts', 'PostController@index')->name('posts.index');
-    Route::post('posts/add', 'PostController@add')->name('posts.add');
-    Route::get('posts/edit/{id}', 'PostController@edit')->name('posts.edit');
-    Route::post('posts/update/{id}', 'PostController@update')->name('posts.update');
-    Route::delete('posts/delete/{id}', 'PostController@delete')->name('posts.delete');
+});
+
+Route::group(['prefix' => 'posts', 'middleware' => 'auth'], function(){
+    Route::post('add', 'PostController@add')->name('posts.add');
+    Route::get('edit/{id}', 'PostController@edit')->name('posts.edit');
+    Route::post('update/{id}', 'PostController@update')->name('posts.update');
+    Route::delete('delete/{id}', 'PostController@delete')->name('posts.delete');
 });
 
 Route::group(['prefix' => 'chat', 'middleware' => 'auth'], function(){
