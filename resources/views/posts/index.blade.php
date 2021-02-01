@@ -60,14 +60,14 @@
           <img src="data:image/png;base64,{{ $post->image }}" class="mb-4">
           @endif
           @if($post->user->id == Auth::id())
-          <div class="d-flex justify-content-end mb-4">
+          <div class="d-flex justify-content-start mb-4">
             <a href="/posts/edit/{{$post->id}}">
-              <input class="btn btn-outline-success btn-sm mr-2 pl-4 pr-4" type="submit" value="編集">
+              <input class="btn btn-outline-success btn-sm mr-2 pl-3 pr-3" type="submit" value="編集">
             </a>
             <form method="POST" action="{{ route('posts.delete',$post->id) }}" accept-charset="UTF-8">
               @csrf
               <input name="_method" type="hidden" value="DELETE">
-              <input class="btn btn-outline-danger btn-sm pl-4 pr-4" type="submit" value="削除">
+              <input class="btn btn-outline-danger btn-sm pl-3 pr-3" type="submit" value="削除">
             </form>
           </div>
           @endif
