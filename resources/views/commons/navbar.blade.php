@@ -34,7 +34,7 @@
         <ul class="navbar-nav">
           <li class="nav-item">{!! link_to_route('signup.get', '新規登録', [], ['class'=>'nav-right']) !!}</li>
           <li class="nav-item">{!! link_to_route('login', 'ログイン', [], ['class'=>'nav-right']) !!}</li>
-          <li class="nav-item">{!! link_to_route('guest', 'かんたんログイン', [], ['class'=>'nav-right']) !!}</li>
+          <li class="nav-item">{!! link_to_route('guest', 'ゲストログイン', [], ['class'=>'nav-right']) !!}</li>
         </ul>
       </div>
   </nav>
