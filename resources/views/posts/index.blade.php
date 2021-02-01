@@ -60,7 +60,7 @@
           <img src="data:image/png;base64,{{ $post->image }}" class="mb-4">
           @endif
           @if($post->user->id == Auth::id())
-          <div class="d-flex justify-content-start mb-4">
+          <div class="d-flex justify-content-end mb-4">
             <a href="/posts/edit/{{$post->id}}">
               <input class="btn btn-outline-success btn-sm mr-2 pl-3 pr-3" type="submit" value="編集">
             </a>
