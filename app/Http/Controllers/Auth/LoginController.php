@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -28,6 +29,19 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
+     /**
+     * ログイン後の処理
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return \Illuminate\Http\Response
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        return redirect('home')->with('message', 'ログインしました');
+    }
+
+
     /**
      * Create a new controller instance.
      *
@@ -37,6 +51,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+     /**
+     * ゲストログイン
+     *
+     * @return \Illuminate\Http\Response
+     */
     
     public function authenticate()
     {
@@ -44,7 +64,7 @@ class LoginController extends Controller
         $password = 'test-guestuser';
         
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            return redirect('home');
+            return redirect('home')->with('message', 'ログインしました');
         }
 
         return redirect('/');

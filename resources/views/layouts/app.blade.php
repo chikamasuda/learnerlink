@@ -17,6 +17,7 @@
 <body>
   @include('commons.navbar')
   @include('commons.error_messages')
+  @include('commons.success_messages')
   @yield('content')
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
