@@ -33,14 +33,12 @@ class LoginController extends Controller
      * ログイン後の処理
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  mixed  $user
      * @return \Illuminate\Http\Response
      */
-    protected function authenticated(Request $request, $user)
+    protected function authenticated(Request $request)
     {
         return redirect('home')->with('message', 'ログインしました');
     }
-
 
     /**
      * Create a new controller instance.
