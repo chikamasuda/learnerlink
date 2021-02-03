@@ -168,8 +168,13 @@
     .user li {
         background: none;
         padding: 0;
-        margin-left: 20px;
         box-shadow: none;
+        width: 180px;
+        margin: 0;
+    }
+    .user-name {
+        font-size: 16px;
+        font-weight: bold;
     }
     .search-container {
         padding: 5px 0 15px 15px;
