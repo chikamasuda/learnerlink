@@ -36,8 +36,6 @@ Learner Link
 
 ・データベース：MySQL
 
-・サーバー：さくらインターネットサーバー
-
 ・開発環境：Docker
 
 ・バージョン管理：git/GitHub
