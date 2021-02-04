@@ -20,7 +20,7 @@
             </div>
             <div class="d-flex justify-content-center">
                 {!! Form::submit('ログインする', ['class' =>'btn btn-info btn-lg mt-4']) !!}
-                {!! link_to_route('guest', 'ゲストログイン', [], ['class'=>'btn btn-danger btn-lg mt-4 ml-4']) !!}
+                {!! link_to_route('guest', 'ゲストログイン', [], ['class'=>'pl-2 pr-2 btn btn-danger btn-lg mt-4 ml-4']) !!}
             </div>
             {!! Form::close() !!}
 

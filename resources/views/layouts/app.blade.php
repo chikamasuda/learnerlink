@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-  <title>LearnerLink</title>
+  <title>Learner Link</title>
 </head>
 
 <body>
