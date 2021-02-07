@@ -40,7 +40,7 @@
           <div class="matchingPerson">
             @if($user->image)
             <div class="text-center">
-              <img class="matching-image mr-2" src="data:image/png;base64,{{ $user->image }}">
+              <img class="matching-image mr-2" src="/storage/user_images/{{ $user->image }}">
             </div>
             @else
             <div class="text-center">

@@ -48,7 +48,7 @@
         <div class="post">
           <div class="d-flex">
             @if ($post->user->image)
-            <div><img class="post-image" src="/storage/user_images/{{ Auth::user()->image }}" alt=""></div>
+            <div><img class="post-image" src="/storage/user_images/{{ $post->user->image }}" alt=""></div>
             @else
             <div><img class="post-image" src="{{ Gravatar::src($post->user->email, 40) }}" alt=""></div>
             @endif
