@@ -26,7 +26,7 @@ class PostController extends Controller
 
     if($originalImg != null) {
       $filePath = $originalImg->store('posts');
-      $post->image = str_replace('posts/', '', $filePath);
+      $post->image = str_replace('posts', '', $filePath);
     }
 
     $post->save();

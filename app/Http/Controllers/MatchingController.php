@@ -23,5 +23,4 @@ class MatchingController extends Controller
         $match_users_count = count($matching_users);
         return view('users.matching', compact('matching_users', 'match_users_count'));
     }
-
 }

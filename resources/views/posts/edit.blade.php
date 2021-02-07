@@ -18,7 +18,7 @@
             <label for="">投稿写真</label><br>
             @if ($post->image)
             <div>
-              <img src="data:image/png;base64,{{ $post->image }}" class="mb-4">
+              <img src="/storage/posts/{{ $post->image }}" class="mb-4">
             </div>
             @endif
             <input type="file" name="image" accept="image/jpeg,image/gif,image/png">
