@@ -35,9 +35,11 @@ class UserController extends Controller
         $user->language = $request->language;
         $user->address = $request->address;
         $user->self_introduction = $request->self_introduction;
+        $originalImg = $request->image;
 
-        if($request->image !=null) {
-            $user->image = base64_encode(file_get_contents($request->image));
+        if($originalImg != null) {
+            $filePath = $originalImg->store('user_images');
+            $user->image = str_replace('user_images/', '', $filePath);
         }
         
         $user->save();

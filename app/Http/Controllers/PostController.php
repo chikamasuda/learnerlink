@@ -22,9 +22,11 @@ class PostController extends Controller
     $post = new Post;
     $post->user_id = Auth::user()->id;
     $post->content = $request->content;
+    $originalImg = $request->image;
 
-    if($request->image != null) {
-      $post->image = base64_encode(file_get_contents($request->image));
+    if($originalImg != null) {
+      $filePath = $originalImg->store('posts');
+      $post->image = str_replace('posts/', '', $filePath);
     }
 
     $post->save();
@@ -46,9 +48,11 @@ class PostController extends Controller
   {
     $post = Post::find($request->id);
     $post->content = $request->content;
+    $originalImg = $request->image;
 
-    if($request->image != null) {
-      $post->image = base64_encode(file_get_contents($request->image));
+    if($originalImg != null) {
+      $filePath = $originalImg->store('posts');
+      $post->image = str_replace('posts/', '', $filePath);
     }
     
     $post->save();

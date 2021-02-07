@@ -17,7 +17,7 @@
         <div class="card-body">
           @if(Auth::user()->image)
           <p class="text-center">
-            <img src="data:image/png;base64,{{ Auth::user()->image }}">
+            <img class="profile-image" src="/storage/user_images/{{ Auth::user()->image }}" alt="">
           </p>
           @else
           <div class="text-center pt-3 pb-2">
@@ -48,7 +48,7 @@
         <div class="post">
           <div class="d-flex">
             @if ($post->user->image)
-            <div><img class="post-image" src="data:image/png;base64,{{ $post->user->image }}"></div>
+            <div><img class="post-image" src="/storage/user_images/{{ Auth::user()->image }}" alt=""></div>
             @else
             <div><img class="post-image" src="{{ Gravatar::src($post->user->email, 40) }}" alt=""></div>
             @endif
@@ -56,9 +56,7 @@
             <small class="post-time">{{ $post->created_at }}</small>
           </div>
           <p class="post-content">{{ $post->content }}</p>
-          @if ($post->image)
-          <img src="data:image/png;base64,{{ $post->image }}" class="mb-4">
-          @endif
+          <img class="mb-3" src="/storage/posts/{{ $post->image }}" alt="">
           @if($post->user->id == Auth::id())
           <div class="d-flex justify-content-end mb-4">
             <a href="/posts/edit/{{$post->id}}">

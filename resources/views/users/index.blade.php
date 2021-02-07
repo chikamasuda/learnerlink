@@ -17,7 +17,7 @@
         <div class="card-body">
           @if(Auth::user()->image)
           <p class="text-center">
-            <img class="profile-image" src="data:image/png;base64,{{ Auth::user()->image }}">
+            <img class="profile-image" src="/storage/user_images/{{ Auth::user()->image }}" alt="">
           </p>
           @else
           <div class="text-center pt-3 pb-2">

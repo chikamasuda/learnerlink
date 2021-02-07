@@ -12,7 +12,7 @@
           <label for="">プロフィール写真</label><br>
           @if ($user->image)
           <p>
-            <img class="user-image" src="data:image/png;base64,{{ $user->image }}" alt="avatar">
+            <img class="user-image" src="/storage/user_images/{{ $user->image }}" alt="">
           </p>
           @endif
           <input type="file" name="image" accept="image/jpeg,image/gif,image/png">

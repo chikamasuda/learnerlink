@@ -7,7 +7,7 @@
       <div class='userInfo'>
       @if($user->image)
         <p class="text-center">
-          <img class="user-image mt-3" src="data:image/png;base64,{{ $user->image }}">
+          <img class="user-image mt-3" src="/storage/user_images/{{ $user->image }}" alt="">
         </p>
       @else
         <div class="text-center pt-3 pb-2">
